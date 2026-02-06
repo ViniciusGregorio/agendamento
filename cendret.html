@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbearia Premium | Agende Agora</title>
+  <meta name="description" content="Barbearia premium com cortes modernos, barba e planos mensais. Agende agora pelo WhatsApp." />
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark: #0f0f0f;
+      --gray: #1a1a1a;
+      --gold: #d4af37;
+      --white: #ffffff;
+      --soft: #f5f5f5;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; }
+
+    /* ===== CTA FIXO ===== */
+    .cta-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      z-index: 999;
+      box-shadow: 0 10px 25px rgba(0,0,0,.4);
+    }
+
+    /* ===== HERO ===== */
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url('https://images.unsplash.com/photo-1621605815971-fbc98d665033') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: black;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-block;
+      transition: .3s;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== SEÇÕES ===== */
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      color: var(--gold);
+    }
+
+    /* ===== BENEFÍCIOS ===== */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .benefit {
+      background: var(--gray);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .benefit h3 {
+      margin-bottom: 10px;
+    }
+
+    /* ===== SERVIÇOS ===== */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service {
+      background: var(--gray);
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    .service span {
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    /* ===== PROVA SOCIAL ===== */
+    .testimonials {
+      display: grid;
+      gap: 30px;
+    }
+
+    .testimonial {
+      background: var(--gray);
+      padding: 25px;
+      border-radius: 15px;
+      font-style: italic;
+    }
+
+    /* ===== URGÊNCIA ===== */
+    .urgency {
+      background: linear-gradient(135deg, var(--gold), #b8962e);
+      color: black;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 20px;
+    }
+
+    .urgency h2 {
+      color: black;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: black;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: .9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CTA FIXO -->
+  <a class="cta-fixed" href="https://wa.me/5500000000000" target="_blank">💬 Agendar no WhatsApp</a>
+
+  <!-- HERO -->
+  <header>
+    <div>
+      <h1>Mais que um corte.<br>Uma barbearia da cidade, feita pra você.</h1>
+      <p>A Cendrette’s é aquele lugar de confiança: corte bem feito, conversa boa, videogame, frigobar gelado e clima de família. Aqui você não é número — é de casa.</p>
+      <a href="#agendar" class="btn-primary">Agendar Agora</a>
+    </div>
+  </header>
+
+  <!-- BENEFÍCIOS -->
+  <section>
+    <h2>Por que a Cendrette’s?</h2>
+    <div class="benefits">
+      <div class="benefit"><h3>✂️ Tradição da cidade</h3><p>Anos atendendo gerações, com respeito, técnica e história.</p></div>
+      <div class="benefit"><h3>🎮 Ambiente de casa</h3><p>Videogame, frigobar e boas conversas enquanto espera.</p></div>
+      <div class="benefit"><h3>🤝 Atendimento familiar</h3><p>Aqui todo mundo se conhece pelo nome.</p></div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section>
+    <h2>O que fazemos</h2>
+    <div class="services">
+      <div class="service"><h3>Corte Masculino</h3><p>Do clássico ao moderno, no capricho.</p><span>★★★★★</span></div>
+      <div class="service"><h3>Barba Tradicional</h3><p>Acabamento preciso e cuidado de verdade.</p><span>★★★★★</span></div>
+      <div class="service"><h3>Corte + Resenha</h3><p>Porque aqui o papo também faz parte.</p><span>★★★★★</span></div>
+      <div class="service"><h3>Cuidado da pele</h3><p>Limpeza completa, esfoliante, máscara negra hidratante</p><span>★★★★★</span></div>
+      <div class="service"><h3>Pigmentação</h3><p>Pigmentação dos fios do cabelo e da barba de preto.</p><span>★★★★★</span></div> 
+      <div class="service"><h3>E muito mais !!</h3><p>Pacotes, produtos únicos, planos etc.</p><span>★★★★★</span></div>
+   
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL -->
+  <section>
+    <h2>Quem já é de casa</h2>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev">‹</button>
+      <div class="carousel" id="carousel"></div>
+      <button class="carousel-btn next">›</button>
+    </div>
+  </section>
+
+  <!-- ADMIN (somente local / simples) -->
+  <section id="admin" style="max-width:600px">
+    <h2>Admin · Depoimentos</h2>
+    <div class="admin-box">
+      <input id="name" placeholder="Nome do cliente">
+      <input type="file" id="photo" accept="image/*">
+      <textarea id="text" placeholder="Depoimento"></textarea>
+      <button class="btn-primary" onclick="addTestimonial()">Adicionar depoimento</button>
+    </div>
+  </section>
+
+  <style>
+    .carousel-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      overflow: hidden;
+    }
+
+    .carousel {
+      display: flex;
+      gap: 20px;
+      transition: transform .5s ease;
+    }
+
+    .testimonial-card {
+      min-width: 260px;
+      background: var(--gray);
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .testimonial-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid var(--gold);
+    }
+
+    .testimonial-card span { color: var(--gold); }
+
+    .carousel-btn {
+      background: var(--gold);
+      border: none;
+      font-size: 2rem;
+      padding: 5px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .admin-box {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .admin-box input, .admin-box textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+    }
+  </style>
+
+  <!-- LOCALIZAÇÃO -->
+  <section>
+    <h2>Onde estamos</h2>
+    <div style="position:relative;width:100%;padding-bottom:56.25%;border-radius:20px;overflow:hidden">
+      <iframe 
+        src="https://www.google.com/maps?q=Cendrette's%20Barbearia&output=embed" 
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- URGÊNCIA -->
+  <section class="urgency" id="agendar">
+    <h2>Chega mais</h2>
+    <p>Agenda aberta para hoje e próximos dias. Vem cortar, trocar ideia e sair renovado.</p>
+    <br>
+    <a class="btn-primary" href="https://maapp.com.br/Cendrettesbarbearia?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnzFxYDJKdkX-cgTsC2awRimOBOAvrR3rca96inidZTpZ07v0_99muSBLZywc_aem_XJjfKRr1JaopMz52n8CIzA">Agendar pelo site</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Barbearia Cendrettes · Todos os direitos reservados</p>
+  </footer> 
+
+  <!-- JS DE CONVERSÃO -->
+  <script>
+  /* ===== CARROSSEL + ADMIN ===== */
+  const carousel = document.getElementById('carousel');
+  let index = 0;
+
+  function loadTestimonials() {
+    const data = JSON.parse(localStorage.getItem('testimonials')) || [];
+    carousel.innerHTML = '';
+    data.forEach(t => {
+      const card = document.createElement('div');
+      card.className = 'testimonial-card';
+      card.innerHTML = `
+        <img src="${t.photo}" />
+        <h4>${t.name}</h4>
+        <p>"${t.text}"</p>
+        <span>⭐⭐⭐⭐⭐</span>`;
+      carousel.appendChild(card);
+    });
+  }
+
+function addTestimonial() {
+  const name = document.getElementById('name').value;
+  const text = document.getElementById('text').value;
+  const fileInput = document.getElementById('photo');
+  const file = fileInput.files[0];
+
+  if (!name || !text || !file) {
+    alert('Preencha tudo e selecione uma imagem');
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const imageBase64 = e.target.result;
+
+    const data = JSON.parse(localStorage.getItem('testimonials')) || [];
+    data.push({
+      name,
+      text,
+      photo: imageBase64
+    });
+
+    localStorage.setItem('testimonials', JSON.stringify(data));
+    loadTestimonials();
+
+    // limpar formulário
+    document.getElementById('name').value = '';
+    document.getElementById('text').value = '';
+    fileInput.value = '';
+  };
+
+  reader.readAsDataURL(file);
+
+  document.querySelector('.next').onclick = () => {
+    index++;
+    carousel.style.transform = `translateX(${-index * 280}px)`;
+  };
+
+  document.querySelector('.prev').onclick = () => {
+    index = Math.max(0, index - 1);
+    carousel.style.transform = `translateX(${-index * 280}px)`;
+  };
+
+  loadTestimonials();
+}
+
+
+  /*function addTestimonial() {
+    const name = document.getElementById('name').value;
+    const photo = document.getElementById('photo').value;
+    const text = document.getElementById('text').value;
+
+    if (!name || !photo || !text) return alert('Preencha tudo');
+
+    const data = JSON.parse(localStorage.getItem('testimonials')) || [];
+    data.push({ name, photo, text });
+    localStorage.setItem('testimonials', JSON.stringify(data));
+
+    loadTestimonials();
+  }
+
+  document.querySelector('.next').onclick = () => {
+    index++;
+    carousel.style.transform = `translateX(${-index * 280}px)`;
+  };
+
+  document.querySelector('.prev').onclick = () => {
+    index = Math.max(0, index - 1);
+    carousel.style.transform = `translateX(${-index * 280}px)`;
+  };
+
+  loadTestimonials();
+  */
+</script>
+
+</body>
+</html>
