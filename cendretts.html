@@ -56,17 +56,17 @@
 
     header h1 {
       font-size: clamp(2.2rem, 5vw, 3.5rem);
-      font-weight: 700;
+      /* font-weight: 700; */
       margin-bottom: 20px;
     }
 
     header p {
       max-width: 600px;
       margin: 0 auto 30px;
-      font-size: 1.1rem;
+      /* font-size: 1.1rem; */
       color: #ddd;
     }
-
+    
     .btn-primary {
       background: var(--gold);
       color: black;
@@ -90,6 +90,13 @@
     }
 
     section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      color: var(--gold);
+    }
+
+    .hh2{
       text-align: center;
       font-size: 2.2rem;
       margin-bottom: 50px;
@@ -166,18 +173,21 @@
       font-size: .9rem;
       color: #aaa;
     }
+    .test{
+      display: none;
+    }
   </style>
 </head>
 <body>
 
   <!-- CTA FIXO -->
-  <a class="cta-fixed" href="https://wa.me/5500000000000" target="_blank">💬 Agendar no WhatsApp</a>
+  <a class="cta-fixed" href="https://wa.me/5524999252519/m:Olá%20Cendrette's%20Gostaria%20de%20agendar%20um%20horário" target="_blank">💬 Agendar no WhatsApp</a>
 
   <!-- HERO -->
   <header>
     <div>
       <h1>Mais que um corte.<br>Uma barbearia da cidade, feita pra você.</h1>
-      <p>A Cendrette’s é aquele lugar de confiança: corte bem feito, conversa boa, videogame, frigobar gelado e clima de família. Aqui você não é número — é de casa.</p>
+      <p>A Cendrette’s é aquele lugar de confiança. Aqui você não é número — é de casa.</p>
       <a href="#agendar" class="btn-primary">Agendar Agora</a>
     </div>
   </header>
@@ -206,28 +216,94 @@
     </div>
   </section>
 
-  <!-- PROVA SOCIAL -->
-  <section>
-    <h2>Quem já é de casa</h2>
+<!-- PROVA SOCIAL -->
+<section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-title" aria-roledescription="carousel" aria-live="polite">
+    <h2 id="testimonials-title" class ="hh2">Quem já é de casa</h2>
 
-    <div class="carousel-wrapper">
-      <button class="carousel-btn prev">‹</button>
-      <div class="carousel" id="carousel"></div>
-      <button class="carousel-btn next">›</button>
+    <div class="testimonial-container">
+
+        <button class="testimonial-btn prevE" aria-controls="track" aria-label="Depoimento anterior" title="Anterior">‹</button>
+
+        <div class="testimonial-track-wrapper" aria-hidden="false" style="max-width:100%;">
+            <!-- Track: mantém id "track" usado pelo JS -->
+            <div class="testimonial-track" id="track" role="list">
+
+                <!-- Depoimento 1 -->
+                <article class="testimonial-card" role="listitem" aria-label="Depoimento de Dimas">
+                    <figure>
+                        <img src="img/img01.png" alt="Dimas sorrindo" loading="lazy" width="90" height="90" />
+                    </figure>
+                    <h4>Dimas</h4>
+                    <blockquote>
+                        <p>Hoje foi dia de retocar o visual! Atendimento top.</p>
+                    </blockquote>
+                    <div class="rating" aria-hidden="true">★★★★★</div>
+                    <span class="sr-only">5 de 5 estrelas</span>
+                </article>
+
+                <!-- Depoimento 2 -->
+                <article class="testimonial-card" role="listitem" aria-label="Depoimento de Castilho">
+                    <figure>
+                        <img src="img/img02.png" alt="Castilho" loading="lazy" width="90" height="90" />
+                    </figure>
+                    <h4>Castilho</h4>
+                    <blockquote>
+                        <p>Manda muito 🔥 sempre saio satisfeito.</p>
+                    </blockquote>
+                    <div class="rating" aria-hidden="true">★★★★★</div>
+                    <span class="sr-only">5 de 5 estrelas</span>
+                </article>
+
+                <!-- Depoimento 3 -->
+                <article class="testimonial-card" role="listitem" aria-label="Depoimento de Wallas Silva">
+                    <figure>
+                        <img src="img/img03.jpeg" alt="Wallas Silva" loading="lazy" width="90" height="90" />
+                    </figure>
+                    <h4>Wallas Silva</h4>
+                    <blockquote>
+                        <p>Meu melhor profissional em cortes de cabelo.</p>
+                    </blockquote>
+                    <div class="rating" aria-hidden="true">★★★★★</div>
+                    <span class="sr-only">5 de 5 estrelas</span>
+                </article>
+
+                <!-- Modelo: duplicar este bloco para escalar -->
+                <!--
+                <article class="testimonial-card" role="listitem" aria-label="Depoimento de NOME">
+                    <figure><img src="img/novo.png" alt="NOME" loading="lazy" width="90" height="90" /></figure>
+                    <h4>NOME</h4>
+                    <blockquote><p>Texto do depoimento.</p></blockquote>
+                    <div class="rating" aria-hidden="true">★★★★★</div>
+                    <span class="sr-only">5 de 5 estrelas</span>
+                </article>
+                -->
+
+            </div>
+        </div>
+
+        <button class="testimonial-btn nextE" aria-controls="track" aria-label="Próximo depoimento" title="Próximo">›</button>
     </div>
-  </section>
 
-  <!-- ADMIN (somente local / simples) -->
-  <section id="admin" style="max-width:600px">
-    <h2>Admin · Depoimentos</h2>
-    <div class="admin-box">
-      <input id="name" placeholder="Nome do cliente">
-      <input type="file" id="photo" accept="image/*">
-      <textarea id="text" placeholder="Depoimento"></textarea>
-      <button class="btn-primary" onclick="addTestimonial()">Adicionar depoimento</button>
+    <!-- Indicadores (progressivo — pode ser ativado por JS se desejar) -->
+    <div class="testimonial-dots" aria-hidden="true" style="display:flex;gap:8px;justify-content:center;margin-top:18px;">
+        <button class="dot" data-index="0" aria-label="Ir para depoimento 1" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.15);border:none"></button>
+        <button class="dot" data-index="1" aria-label="Ir para depoimento 2" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.15);border:none"></button>
+        <button class="dot" data-index="2" aria-label="Ir para depoimento 3" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.15);border:none"></button>
     </div>
-  </section>
 
+    <!-- Fallback sem JS: exibe todos em grade -->
+    <noscript>
+        <style>
+            .testimonial-track { display:flex; flex-wrap:wrap; gap:20px; transform:none !important; }
+            .testimonial-track .testimonial-card { min-width:240px; flex:1 1 300px; }
+            .testimonial-btn { display:none !important; }
+            .testimonial-dots { display:none !important; }
+        </style>
+    </noscript>
+</section>
+
+
+  
   <style>
     .carousel-wrapper {
       display: flex;
@@ -242,39 +318,100 @@
       transition: transform .5s ease;
     }
 
-    .testimonial-card {
-      min-width: 260px;
-      background: var(--gray);
-      padding: 25px;
-      border-radius: 20px;
-      text-align: center;
-    }
+   .testimonials-section{
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-    .testimonial-card img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border: 2px solid var(--gold);
-    }
+.testimonials-section h2{
+  text-align:center;
+  font-size:2.2rem;
+  margin-bottom:50px;
+  color:var(--gold);
+}
 
-    .testimonial-card span { color: var(--gold); }
+.testimonial-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+}
 
-    .carousel-btn {
-      background: var(--gold);
-      border: none;
-      font-size: 2rem;
-      padding: 5px 15px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
+.testimonial-track-wrapper{
+  width:320px;
+  overflow:hidden;
+}
 
-    .admin-box {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+.testimonial-track{
+  display:flex;
+  transition:transform .6s ease;
+}
+
+.testimonial-card{
+  min-width:320px;
+  background:var(--gray);
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 15px 30px rgba(0,0,0,.4);
+}
+
+.testimonial-card img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--gold);
+  margin-bottom:15px;
+}
+
+.testimonial-card h4{
+  margin-bottom:10px;
+}
+
+.testimonial-card p{
+  font-style:italic;
+  margin-bottom:15px;
+}
+
+.testimonial-card span{
+  color:var(--gold);
+}
+
+/* ===== BOTÕES ===== */
+.testimonial-btn{
+  background:rgba(212,175,55,.85);
+  border:none;
+  font-size:2.4rem;
+  padding:6px 18px;
+  border-radius:14px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.testimonial-btn:hover{
+  background:var(--gold);
+  transform:scale(1.08);
+}
+
+.testimonial-btn:disabled{
+  opacity:.3;
+  cursor:default;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width:700px){
+  .testimonial-btn{
+    display:none;
+  }
+}
+
+.admin-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;}
 
     .admin-box input, .admin-box textarea {
       padding: 12px;
@@ -288,7 +425,7 @@
     <h2>Onde estamos</h2>
     <div style="position:relative;width:100%;padding-bottom:56.25%;border-radius:20px;overflow:hidden">
       <iframe 
-        src="https://www.google.com/maps?q=Cendrette's%20Barbearia&output=embed" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.123456789012!2d-43.123456789012!3d-22.987654321098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9999999999999999%3A0x9999999999999999!2sCendrettes%20Barbearia!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
         style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" 
         allowfullscreen="" 
         loading="lazy" 
@@ -296,6 +433,80 @@
       </iframe>
     </div>
   </section>
+  
+    <div class="intro-panel">
+        <div class="intro-content">
+            <h2 class="intro-title">A Cendrette’s é aquele lugar de confiança</h2>
+            <p class="intro-desc">Corte bem feito, conversa boa, <strong>videogame</strong>, <strong>frigobar gelado</strong> e clima de família. Aqui você não é número — é de casa.</p>
+            <div class="intro-features" aria-hidden="true">
+                <span>✂️ Corte com precisão</span>
+                <span>🎮 Espaço de lazer</span>
+                <span>🥤 Frigobar</span>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    /* Texto bonito e responsivo */
+    .intro-panel{
+        max-width:1100px;
+        margin:40px auto;
+        padding:28px;
+        border-radius:14px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+        box-shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    .intro-title{
+        font-size: clamp(1.4rem, 3.8vw, 2rem);
+        color: var(--gold);
+        margin-bottom:10px;
+        font-weight:700;
+    }
+    .intro-desc{
+        font-size: clamp(1rem, 2.4vw, 1.125rem);
+        color: #ddd;
+        line-height:1.6;
+        margin-bottom:16px;
+        max-width:900px;
+    }
+    .intro-features{
+        display:flex;
+        gap:10px;
+        flex-wrap:wrap;
+    }
+    .intro-features span{
+        background: rgba(212,175,55,0.12);
+        color: #fff;
+        padding:8px 12px;
+        border-radius:999px;
+        font-weight:600;
+        font-size:.95rem;
+    }
+
+    /* Layout responsivo: em telas grandes alinha à esquerda com espaço */
+    @media (min-width:900px){
+        .intro-panel{
+            display:flex;
+            align-items:center;
+            gap:28px;
+            padding:36px;
+        }
+        .intro-content{
+            flex:1;
+        }
+        .intro-title, .intro-desc{
+            text-align:left;
+        }
+    }
+
+    /* Em mobile centraliza para melhor leitura */
+    @media (max-width:899px){
+        .intro-title, .intro-desc{
+            text-align:center;
+        }
+    }
+    </style>
+  </div>
 
   <!-- URGÊNCIA -->
   <section class="urgency" id="agendar">
@@ -312,98 +523,63 @@
 
   <!-- JS DE CONVERSÃO -->
   <script>
-  /* ===== CARROSSEL + ADMIN ===== */
-  const carousel = document.getElementById('carousel');
-  let index = 0;
+  /* ================== JS ================== */
+const track = document.getElementById('track');
+const cards = document.querySelectorAll('.testimonial-card');
+const nextBtn = document.querySelector('.nextE');
+const prevBtn = document.querySelector('.prevE');
 
-  function loadTestimonials() {
-    const data = JSON.parse(localStorage.getItem('testimonials')) || [];
-    carousel.innerHTML = '';
-    data.forEach(t => {
-      const card = document.createElement('div');
-      card.className = 'testimonial-card';
-      card.innerHTML = `
-        <img src="${t.photo}" />
-        <h4>${t.name}</h4>
-        <p>"${t.text}"</p>
-        <span>⭐⭐⭐⭐⭐</span>`;
-      carousel.appendChild(card);
-    });
-  }
+let index2 = 0;
+const cardWidth = 320;
+let autoPlay;
 
-function addTestimonial() {
-  const name = document.getElementById('name').value;
-  const text = document.getElementById('text').value;
-  const fileInput = document.getElementById('photo');
-  const file = fileInput.files[0];
-
-  if (!name || !text || !file) {
-    alert('Preencha tudo e selecione uma imagem');
-    return;
-  }
-
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    const imageBase64 = e.target.result;
-
-    const data = JSON.parse(localStorage.getItem('testimonials')) || [];
-    data.push({
-      name,
-      text,
-      photo: imageBase64
-    });
-
-    localStorage.setItem('testimonials', JSON.stringify(data));
-    loadTestimonials();
-
-    // limpar formulário
-    document.getElementById('name').value = '';
-    document.getElementById('text').value = '';
-    fileInput.value = '';
-  };
-
-  reader.readAsDataURL(file);
-
-  document.querySelector('.next').onclick = () => {
-    index++;
-    carousel.style.transform = `translateX(${-index * 280}px)`;
-  };
-
-  document.querySelector('.prev').onclick = () => {
-    index = Math.max(0, index - 1);
-    carousel.style.transform = `translateX(${-index * 280}px)`;
-  };
-
-  loadTestimonials();
+/* ===== FUNÇÕES ===== */
+function update(){
+  track.style.transform = `translateX(${-index2 * cardWidth}px)`;
+  prevBtn.disabled = index2 === 0;
+  nextBtn.disabled = index2 === cards.length - 1;
 }
 
+function nextSlide(){
+  index2 = (index2 + 1) % cards.length;
+  update();
+}
 
-  /*function addTestimonial() {
-    const name = document.getElementById('name').value;
-    const photo = document.getElementById('photo').value;
-    const text = document.getElementById('text').value;
+function prevSlide(){
+  index2 = index2 === 0 ? cards.length - 1 : index2 - 1;
+  update();
+}
 
-    if (!name || !photo || !text) return alert('Preencha tudo');
+/* ===== BOTÕES ===== */
+nextBtn.addEventListener('click',()=>{
+  nextSlide();
+  resetAutoplay();
+});
 
-    const data = JSON.parse(localStorage.getItem('testimonials')) || [];
-    data.push({ name, photo, text });
-    localStorage.setItem('testimonials', JSON.stringify(data));
+prevBtn.addEventListener('click',()=>{
+  prevSlide();
+  resetAutoplay();
+});
 
-    loadTestimonials();
-  }
+/* ===== AUTOPLAY ===== */
+function startAutoplay(){
+  autoPlay = setInterval(nextSlide,5000); // 5s
+}
 
-  document.querySelector('.next').onclick = () => {
-    index++;
-    carousel.style.transform = `translateX(${-index * 280}px)`;
-  };
+function resetAutoplay(){
+  clearInterval(autoPlay);
+  startAutoplay();
+}
 
-  document.querySelector('.prev').onclick = () => {
-    index = Math.max(0, index - 1);
-    carousel.style.transform = `translateX(${-index * 280}px)`;
-  };
+/* ===== PAUSA AO PASSAR MOUSE ===== */
+track.addEventListener('mouseenter',()=>clearInterval(autoPlay));
+track.addEventListener('mouseleave',startAutoplay);
 
-  loadTestimonials();
-  */
+update();
+startAutoplay();
+
+
+
 </script>
 
 </body>
