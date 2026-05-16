@@ -1,0 +1,389 @@
+/* Configurações Globais */
+body {
+  margin: 0;
+  background: #0d0d0d;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+/* 1. Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.8)), url('img/hero.jpg') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  z-index: 2;
+  padding: 20px;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #ddd;
+  font-size: 1.2rem;
+}
+
+.hero-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-gold,
+.btn-whatsapp {
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+  cursor: pointer;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.btn-gold {
+  background: #d4af37;
+  color: black;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+  width: 100%;
+}
+
+.hero-buttons .btn-whatsapp {
+  width: auto;
+}
+
+.btn-gold:hover,
+.btn-whatsapp:hover {
+  transform: scale(1.05);
+}
+
+/* 2. Experiência */
+.experience {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.experience h2 {
+  color: #d4af37;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: #151515;
+  padding: 30px 20px;
+  border-radius: 15px;
+  border: 1px solid #222;
+}
+
+.feature-card h3 {
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+/* 3. Cardápio */
+.menu-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.menu-section h2 {
+  text-align: center;
+  color: #d4af37;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.category-title {
+  color: #fff;
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin: 40px 0 20px 0;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.menu-card {
+  background: #1c1c1c;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: .4s;
+  border: 1px solid #2a2a2a;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.menu-content {
+  padding: 25px;
+}
+
+.menu-content h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.menu-content p {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.menu-content span {
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* 4. Galeria */
+.gallery {
+  padding: 80px 20px;
+  background: #111;
+  text-align: center;
+}
+
+.gallery h2 {
+  color: #d4af37;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* 5. Depoimentos */
+.testimonials {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #d4af37;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 4px solid #d4af37;
+  text-align: left;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+  color: #fff;
+}
+
+/* 6. Localização */
+.location {
+  padding: 80px 20px;
+  background: #151515;
+}
+
+.location h2 {
+  text-align: center;
+  color: #d4af37;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.location-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+  align-items: center;
+}
+
+.location-content .info h3 {
+  color: #d4af37;
+  margin: 20px 0 5px 0;
+}
+
+.location-content .info p {
+  color: #bbb;
+}
+
+.map iframe {
+  border-radius: 15px;
+}
+
+/* 7. CTA Final & Agendamento (Reserva) */
+.booking {
+  padding: 100px 20px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.booking h2 {
+  color: #d4af37;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.booking p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+#bookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #333;
+}
+
+#bookingForm input,
+#bookingForm textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #0d0d0d;
+  color: white;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+#bookingForm input:focus,
+#bookingForm textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+/* Ajusta o ícone de calendário/relógio para não ficar preto no fundo escuro */
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.footer-social {
+  margin-top: 40px;
+}
+
+.footer-social a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.footer-social a:hover {
+  text-decoration: underline;
+}
+
+/* Botão Flutuante WhatsApp */
+.floating-whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  z-index: 999;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: .3s;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+}
