@@ -411,6 +411,45 @@ h1, h2, h3, h4 {
 .floating-whatsapp span:first-child {
   font-size: 1.4rem;
 }
+
+/* --- Botão de Download do Cardápio --- */
+.download-menu-container {
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  background: transparent;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-outline-gold:hover {
+  background: #d4af37;
+  color: #0d0d0d;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+}
+
+/* Garante que no celular o botão ocupe 100% da tela */
+@media (max-width: 768px) {
+  .btn-outline-gold {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
 /* --- AJUSTES PARA CELULARES E TABLETS (MEDIA QUERIES) --- */
 @media (max-width: 768px) {
 .btn-gold:active,
