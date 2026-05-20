@@ -5,6 +5,7 @@ body {
   color: white;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+  padding-bottom: 100px; /* Espaço para a barra flutuante */
 }
 
 h1, h2, h3, h4 {
@@ -14,12 +15,14 @@ h1, h2, h3, h4 {
 /* 1. Hero */
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100svh;
+  height: auto;
   background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.8)), url('img/hero.jpg') center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .hero-content {
@@ -119,7 +122,7 @@ h1, h2, h3, h4 {
 }
 
 .feature-card p {
-  color: #aaa;
+  color: #cfcfcf;
   font-size: 0.95rem;
 }
 
@@ -166,8 +169,9 @@ h1, h2, h3, h4 {
 
 .menu-card img {
   width: 100%;
-  height: 240px;
-  object-fit: cover;
+  aspect-ratio: 4 / 3; /* Mantém a proporção retangular */
+  object-fit: cover; /* Corta o excesso sem achatar a foto */
+  display: block; /* Remove espaços em branco indesejados abaixo da imagem */
 }
 
 .menu-content {
@@ -180,7 +184,7 @@ h1, h2, h3, h4 {
 }
 
 .menu-content p {
-  color: #aaa;
+  color: #cfcfcf;
   font-size: 0.9rem;
   margin-bottom: 15px;
 }
@@ -294,6 +298,8 @@ h1, h2, h3, h4 {
 }
 
 .map iframe {
+  width: 100%;
+  height: 320px;
   border-radius: 15px;
 }
 
@@ -312,7 +318,7 @@ h1, h2, h3, h4 {
 }
 
 .booking p {
-  color: #aaa;
+  color: #cfcfcf;
   margin-bottom: 30px;
 }
 
@@ -365,25 +371,75 @@ h1, h2, h3, h4 {
   text-decoration: underline;
 }
 
-/* Botão Flutuante WhatsApp */
+/* Barra flutuante WhatsApp */
+
 .floating-whatsapp {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+
+  width: calc(100% - 30px);
+  max-width: 420px;
+
   background: #25d366;
+  color: white;
+
+  padding: 16px 20px;
+  border-radius: 18px;
+
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  z-index: 999;
+  justify-content: center;
+  gap: 12px;
+
+  font-size: 1rem;
+  font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+
+  z-index: 9999;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+
   transition: .3s;
 }
 
 .floating-whatsapp:hover {
-  transform: scale(1.1);
+  transform: translateX(-50%) scale(1.02);
+}
+
+.floating-whatsapp span:first-child {
+  font-size: 1.4rem;
+}
+/* --- AJUSTES PARA CELULARES E TABLETS (MEDIA QUERIES) --- */
+@media (max-width: 768px) {
+.btn-gold:active,
+.btn-whatsapp:active {
+  transform: scale(.98);
+}
+  /* Reduz os respiros gigantes para economizar espaço de tela no celular */
+  .experience, .menu-section, .gallery, .testimonials, .location, .booking {
+    padding: 60px 15px; 
+  }
+  .features-grid {
+  grid-template-columns: 1fr;
+  
+}
+  button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+  .hero {
+  min-height: 100svh;
+  padding: 40px 20px;
+}
+
+  /* Coloca as informações de endereço e o mapa em uma coluna só */
+  .location-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
