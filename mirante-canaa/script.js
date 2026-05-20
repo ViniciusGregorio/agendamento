@@ -20,8 +20,8 @@ form.addEventListener('submit', (e) => {
                    `*Pessoas:* ${pessoas}%0A` +
                    `*Obs:* ${obs ? obs : 'Nenhuma'}`;
 
-  // Substitua o número abaixo pelo WhatsApp real do restaurante (apenas números)
-  const numeroWhatsApp = '5500000000000'; 
+  
+  const numeroWhatsApp = '5521980297671'; 
 
   window.open(
     `https://wa.me/${numeroWhatsApp}?text=${mensagem}`,
