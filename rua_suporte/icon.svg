@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#173f35"/>
+  <path d="M86 350c70-22 73-153 173-188 63-23 122 1 167-44" fill="none" stroke="#f5b942" stroke-width="33" stroke-linecap="round" stroke-dasharray="45 35"/>
+  <circle cx="95" cy="351" r="25" fill="#f5f1e7"/>
+  <path d="M408 94c-43 0-78 35-78 78 0 57 78 142 78 142s78-85 78-142c0-43-35-78-78-78Zm0 106a28 28 0 1 1 0-56 28 28 0 0 1 0 56Z" fill="#f5f1e7"/>
+  <text x="79" y="447" fill="#f5f1e7" font-family="Arial, sans-serif" font-size="90" font-weight="800">RV</text>
+</svg>

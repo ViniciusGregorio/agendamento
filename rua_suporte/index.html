@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#173f35" />
+    <meta name="description" content="RotaVini — clientes, visitas, vendas, caixa, tempo e metas em um só lugar." />
+    <title>RotaVini</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <header class="topbar">
+        <button class="brand" type="button" data-action="go-home" aria-label="Ir para o início">
+          <span class="brand-mark">RV</span>
+          <span>
+            <strong>RotaVini</strong>
+            <small id="headerContext">Seu dia em movimento</small>
+          </span>
+        </button>
+        <div class="topbar-actions">
+          <button id="installButton" class="icon-button is-hidden" type="button" data-action="install-app" aria-label="Instalar aplicativo" title="Instalar aplicativo">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v3h14v-3"/></svg>
+          </button>
+          <button class="avatar-button" type="button" data-action="open-settings" aria-label="Configurações">V</button>
+        </div>
+      </header>
+
+      <main id="mainContent" tabindex="-1"></main>
+
+      <button id="quickAddButton" class="fab" type="button" data-action="quick-add" aria-label="Adicionar registro">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+
+      <nav class="bottom-nav" aria-label="Navegação principal">
+        <button class="nav-item is-active" type="button" data-view="today">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></svg>
+          <span>Hoje</span>
+        </button>
+        <button class="nav-item" type="button" data-view="clients">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 19v-1.5c0-2-1.8-3.5-4-3.5s-4 1.5-4 3.5V19M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM18 8a2.5 2.5 0 0 1 0 5M19 14c1.3.5 2 1.5 2 3v1"/></svg>
+          <span>Clientes</span>
+        </button>
+        <button class="nav-item" type="button" data-view="deals">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 8h16v11H4zM8 8V5h8v3M4 12h16M10 12v2h4v-2"/></svg>
+          <span>Negócios</span>
+        </button>
+        <button class="nav-item" type="button" data-view="finance">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16v12H4zM4 10h16M16 15h2M7 4h10"/></svg>
+          <span>Caixa</span>
+        </button>
+        <button class="nav-item" type="button" data-view="review">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19V9m7 10V5m7 14v-7M3 19h18"/></svg>
+          <span>Revisão</span>
+        </button>
+      </nav>
+    </div>
+
+    <div id="modalRoot"></div>
+    <div id="toastRoot" class="toast-root" aria-live="polite"></div>
+
+    <template id="modalTemplate">
+      <div class="modal-backdrop" data-action="close-modal">
+        <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <header class="modal-header">
+            <div>
+              <span class="eyebrow" id="modalEyebrow"></span>
+              <h2 id="modalTitle"></h2>
+            </div>
+            <button class="icon-button" type="button" data-action="close-modal" aria-label="Fechar">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg>
+            </button>
+          </header>
+          <div id="modalBody" class="modal-body"></div>
+        </section>
+      </div>
+    </template>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
