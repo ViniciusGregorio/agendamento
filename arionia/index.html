@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Academia Ariônia em Cruzeiro/SP: musculação, funcional, cardio e acompanhamento próximo. Treine no seu ritmo, das 5h às 22h."
+    />
+    <meta name="theme-color" content="#0b0d0c" />
+    <meta property="og:title" content="Academia Ariônia — Seu treino. Sua evolução." />
+    <meta
+      property="og:description"
+      content="Uma academia completa, acolhedora e com acompanhamento de verdade no centro de Cruzeiro."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/hero-arionia.webp" />
+    <title>Academia Ariônia | Musculação e Funcional em Cruzeiro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ExerciseGym",
+        "name": "Academia Ariônia",
+        "image": "assets/hero-arionia.webp",
+        "telephone": "+55 12 98891-1301",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Dr. Celestino, 520",
+          "addressLocality": "Cruzeiro",
+          "addressRegion": "SP",
+          "postalCode": "12701-430",
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "05:00",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "07:00",
+            "closes": "12:00"
+          }
+        ],
+        "sameAs": ["https://www.instagram.com/academiaarionia/"]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="announcement" role="note">
+      <span class="announcement__pulse" aria-hidden="true"></span>
+      <span>Há mais de 23 anos fazendo Cruzeiro se movimentar.</span>
+      <a href="#visita">Agende uma visita <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <header class="site-header" id="topo">
+      <div class="container nav-wrap">
+        <a class="brand" href="#topo" aria-label="Academia Ariônia - início">
+          <span class="brand__mark" aria-hidden="true">A</span>
+          <span class="brand__text">ARIÔNIA<small>ACADEMIA</small></span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span><span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+          <a href="#estrutura">A academia</a>
+          <a href="#modalidades">Modalidades</a>
+          <a href="#depoimentos">Resultados</a>
+          <a href="#duvidas">Dúvidas</a>
+          <a class="btn btn--small btn--dark" href="#visita">Começar agora</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__media" role="img" aria-label="Aluna treinando com orientação de um professor"></div>
+        <div class="hero__shade"></div>
+        <div class="container hero__content">
+          <div class="hero__eyebrow reveal">
+            <span>Academia completa</span>
+            <span>Centro de Cruzeiro</span>
+          </div>
+          <h1 id="hero-title" class="reveal">
+            Seu treino.<br />
+            <em>Sua evolução.</em>
+          </h1>
+          <p class="hero__copy reveal">
+            Estrutura completa, treino pensado para você e professores que acompanham de verdade —
+            do primeiro dia à sua próxima conquista.
+          </p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary" href="#visita">
+              Quero começar
+              <span class="btn__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="text-link" href="#estrutura">
+              Conheça a Ariônia
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__rating reveal" aria-label="Avaliação de 4,86 de 5 no Wellhub">
+          <div class="hero__stars" aria-hidden="true">★★★★★</div>
+          <strong>4,86</strong>
+          <span>em 190 avaliações<br />no Wellhub</span>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Diferenciais da academia">
+        <div class="container proof-grid">
+          <div class="proof-item reveal">
+            <strong>23+</strong>
+            <span>anos de história</span>
+          </div>
+          <div class="proof-item reveal">
+            <strong>05—22h</strong>
+            <span>de segunda a sexta</span>
+          </div>
+          <div class="proof-item reveal">
+            <strong>4,86</strong>
+            <span>avaliação no Wellhub</span>
+          </div>
+          <div class="proof-item reveal">
+            <strong>Centro</strong>
+            <span>fácil de chegar</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto section" id="estrutura">
+        <div class="container manifesto__grid">
+          <div class="section-kicker reveal">
+            <span>01</span>
+            <span>Treino com propósito</span>
+          </div>
+          <div>
+            <h2 class="section-title reveal">
+              Academia boa não é a que deixa você sozinho.
+              <em>É a que faz você querer voltar.</em>
+            </h2>
+            <div class="manifesto__body">
+              <p class="lead reveal">
+                Aqui você não precisa chegar sabendo. Nossa equipe entende seu momento, orienta seu
+                treino e ajuda você a evoluir com segurança — sem julgamento e sem pressão.
+              </p>
+              <div class="benefits reveal">
+                <div class="benefit">
+                  <span class="benefit__icon" aria-hidden="true">01</span>
+                  <div>
+                    <strong>Treino orientado</strong>
+                    <p>Uma rotina alinhada ao seu objetivo e ao seu nível.</p>
+                  </div>
+                </div>
+                <div class="benefit">
+                  <span class="benefit__icon" aria-hidden="true">02</span>
+                  <div>
+                    <strong>Equipe por perto</strong>
+                    <p>Professores atentos para corrigir, incentivar e adaptar.</p>
+                  </div>
+                </div>
+                <div class="benefit">
+                  <span class="benefit__icon" aria-hidden="true">03</span>
+                  <div>
+                    <strong>Ambiente acolhedor</strong>
+                    <p>Gente de verdade treinando no próprio ritmo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="modalities section" id="modalidades">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="section-kicker section-kicker--light">
+              <span>02</span>
+              <span>Do seu jeito</span>
+            </div>
+            <h2 class="section-title section-title--light">
+              Um espaço.<br /><em>Muitas formas de evoluir.</em>
+            </h2>
+            <p>Escolha seu objetivo. A gente ajuda a construir o caminho.</p>
+          </div>
+
+          <div class="modality-grid">
+            <article class="modality-card reveal">
+              <div class="modality-card__number">01</div>
+              <div class="modality-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M11 25v14m8-19v24m26-24v24m8-19v14M19 32h26M6 28v8m52-8v8" /></svg>
+              </div>
+              <h3>Musculação</h3>
+              <p>Força, condicionamento, saúde e estética com variedade de aparelhos.</p>
+              <a href="#visita">Quero conhecer <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="modality-card modality-card--accent reveal">
+              <div class="modality-card__number">02</div>
+              <div class="modality-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M19 47c6-2 10-8 10-15V17m16 30c-6-2-10-8-10-15V17M20 17h24M13 47h38" /></svg>
+              </div>
+              <h3>Treino funcional</h3>
+              <p>Movimentos dinâmicos para ganhar resistência, mobilidade e disposição.</p>
+              <a href="#visita">Quero conhecer <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="modality-card reveal">
+              <div class="modality-card__number">03</div>
+              <div class="modality-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M11 39c7 0 7-14 14-14s7 20 14 20 7-26 14-26M10 52h44" /></svg>
+              </div>
+              <h3>Cardio</h3>
+              <p>Mais fôlego, energia e saúde cardiovascular para a sua rotina.</p>
+              <a href="#visita">Quero conhecer <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="modality-card reveal">
+              <div class="modality-card__number">04</div>
+              <div class="modality-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M18 46h28M13 38h38M20 30h24M26 22h12" /></svg>
+              </div>
+              <h3>Step e aulas</h3>
+              <p>Treinos coletivos animados para movimentar o corpo e renovar a energia.</p>
+              <a href="#visita">Quero conhecer <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience section">
+        <div class="container experience__grid">
+          <div class="experience__visual reveal">
+            <div class="experience__shape">
+              <span>DESDE</span>
+              <strong>2002</strong>
+            </div>
+            <div class="experience__caption">Experiência que acolhe.<br />Estrutura que acompanha.</div>
+          </div>
+          <div class="experience__content">
+            <div class="section-kicker reveal">
+              <span>03</span>
+              <span>Estrutura completa</span>
+            </div>
+            <h2 class="section-title reveal">Tudo o que você precisa para <em>não parar.</em></h2>
+            <p class="lead reveal">
+              Um ambiente amplo, limpo e equipado para você treinar com conforto do aquecimento à
+              última repetição.
+            </p>
+            <ul class="amenity-list reveal">
+              <li><span>01</span>Variedade de equipamentos</li>
+              <li><span>02</span>Vestiários e chuveiros</li>
+              <li><span>03</span>Armários disponíveis</li>
+              <li><span>04</span>Wi-Fi</li>
+              <li><span>05</span>Personal trainer</li>
+              <li><span>06</span>Acesso Wellhub e TotalPass</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials section" id="depoimentos">
+        <div class="container">
+          <div class="testimonials__intro reveal">
+            <div class="section-kicker section-kicker--light">
+              <span>04</span>
+              <span>Quem treina, recomenda</span>
+            </div>
+            <div class="rating-lockup">
+              <span class="rating-lockup__number">4,8</span>
+              <div>
+                <div class="rating-lockup__stars" aria-hidden="true">★★★★★</div>
+                <p>Mais de 80 avaliações públicas</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-track" aria-live="polite">
+            <article class="testimonial-card reveal">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                Ambiente excelente, com professores dedicados que auxiliam nos exercícios.
+              </blockquote>
+              <footer><strong>José Vantoir</strong><span>Aluno da Ariônia</span></footer>
+            </article>
+            <article class="testimonial-card reveal">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                Ambiente amplo e limpo, professores educados e muita variedade de aparelhos.
+              </blockquote>
+              <footer><strong>Paulo Fidalgo</strong><span>Aluno da Ariônia</span></footer>
+            </article>
+            <article class="testimonial-card reveal">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                Os treinos respeitam a necessidade do aluno e o acompanhamento é de perto.
+              </blockquote>
+              <footer><strong>Adelino De Santi Jr.</strong><span>Aluno da Ariônia</span></footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="steps section">
+        <div class="container">
+          <div class="section-head section-head--split">
+            <div>
+              <div class="section-kicker reveal">
+                <span>05</span>
+                <span>Comece sem complicação</span>
+              </div>
+              <h2 class="section-title reveal">Seu primeiro passo é <em>mais simples do que parece.</em></h2>
+            </div>
+            <p class="lead reveal">Não espere a segunda-feira perfeita. Fale com a equipe e encontre o melhor plano para sua rotina.</p>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card reveal">
+              <span>1</span>
+              <h3>Conte seu objetivo</h3>
+              <p>Chame no WhatsApp e diga o que você quer conquistar.</p>
+            </article>
+            <article class="step-card reveal">
+              <span>2</span>
+              <h3>Conheça a academia</h3>
+              <p>Veja a estrutura, tire suas dúvidas e sinta o ambiente.</p>
+            </article>
+            <article class="step-card reveal">
+              <span>3</span>
+              <h3>Comece no seu ritmo</h3>
+              <p>Receba orientação e evolua um treino de cada vez.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="visit section" id="visita">
+        <div class="container visit__grid">
+          <div class="visit__content">
+            <div class="section-kicker reveal">
+              <span>06</span>
+              <span>Vamos conversar?</span>
+            </div>
+            <h2 class="section-title reveal">Encontre o treino que <em>cabe na sua vida.</em></h2>
+            <p class="lead reveal">
+              Responda três perguntas rápidas. Ao enviar, sua conversa já abre pronta no WhatsApp da Ariônia.
+            </p>
+            <div class="visit__contact reveal">
+              <span>Prefere falar direto?</span>
+              <a href="https://wa.me/5512988911301?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ari%C3%B4nia%20e%20quero%20saber%20mais." target="_blank" rel="noopener">
+                (12) 98891-1301 <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="lead-form reveal" id="lead-form">
+            <div class="field">
+              <label for="name">Como podemos chamar você?</label>
+              <input id="name" name="name" type="text" placeholder="Seu primeiro nome" autocomplete="given-name" required />
+            </div>
+            <fieldset class="field">
+              <legend>Qual é o seu principal objetivo?</legend>
+              <div class="choice-grid">
+                <label class="choice"><input type="radio" name="goal" value="Ganhar força e massa muscular" required /><span>Ganhar força</span></label>
+                <label class="choice"><input type="radio" name="goal" value="Emagrecer e ganhar condicionamento" /><span>Emagrecer</span></label>
+                <label class="choice"><input type="radio" name="goal" value="Melhorar saúde e disposição" /><span>Ter mais saúde</span></label>
+                <label class="choice"><input type="radio" name="goal" value="Voltar a treinar" /><span>Voltar a treinar</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="period">Qual período combina com você?</label>
+              <select id="period" name="period" required>
+                <option value="" disabled selected>Selecione um período</option>
+                <option>Manhã (5h às 12h)</option>
+                <option>Tarde (12h às 18h)</option>
+                <option>Noite (18h às 22h)</option>
+                <option>Ainda não sei</option>
+              </select>
+            </div>
+            <button class="btn btn--primary btn--full" type="submit">
+              Conversar no WhatsApp <span class="btn__arrow" aria-hidden="true">↗</span>
+            </button>
+            <p class="form-note">Sem compromisso. Você fala direto com a equipe.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="location section">
+        <div class="container location__grid">
+          <div class="location__card reveal">
+            <div class="section-kicker">
+              <span>07</span>
+              <span>Onde estamos</span>
+            </div>
+            <h2>Bem no centro de Cruzeiro.</h2>
+            <address>
+              Rua Dr. Celestino, 520<br />
+              Centro — Cruzeiro, SP
+            </address>
+            <a class="btn btn--dark" href="https://www.google.com/maps/search/?api=1&query=Academia+Ari%C3%B4nia+Rua+Dr+Celestino+520+Cruzeiro+SP" target="_blank" rel="noopener">
+              Como chegar <span class="btn__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="hours reveal">
+            <span class="hours__eyebrow">Horários</span>
+            <div class="hours__row"><span>Segunda a sexta</span><strong>05:00 — 22:00</strong></div>
+            <div class="hours__row"><span>Sábado</span><strong>07:00 — 12:00</strong></div>
+            <div class="hours__row"><span>Domingo</span><strong>Fechado</strong></div>
+            <p>Horários sujeitos a alterações em feriados.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section" id="duvidas">
+        <div class="container faq__grid">
+          <div>
+            <div class="section-kicker reveal">
+              <span>08</span>
+              <span>Dúvidas frequentes</span>
+            </div>
+            <h2 class="section-title reveal">Ainda pensando se é <em>para você?</em></h2>
+          </div>
+          <div class="accordion">
+            <details class="reveal">
+              <summary>Preciso já estar em forma para começar?<span aria-hidden="true">+</span></summary>
+              <p>Não. A academia é justamente o lugar para começar. A equipe orienta o treino de acordo com seu nível e seu objetivo.</p>
+            </details>
+            <details class="reveal">
+              <summary>Posso conhecer a academia antes de me matricular?<span aria-hidden="true">+</span></summary>
+              <p>Sim. Chame no WhatsApp para combinar uma visita, conhecer a estrutura e conversar com a equipe sem compromisso.</p>
+            </details>
+            <details class="reveal">
+              <summary>A Ariônia aceita Wellhub e TotalPass?<span aria-hidden="true">+</span></summary>
+              <p>Sim, a Ariônia aparece como parceira nas duas plataformas. Confirme a cobertura do seu plano diretamente com a equipe.</p>
+            </details>
+            <details class="reveal">
+              <summary>Quais são os planos e valores?<span aria-hidden="true">+</span></summary>
+              <p>Há diferentes opções de planos. Fale com a equipe para receber os valores atualizados e encontrar o formato ideal para sua rotina.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="final-cta__marquee" aria-hidden="true">
+          <span>SEU MOMENTO É AGORA&nbsp; — &nbsp;SEU MOMENTO É AGORA&nbsp; — &nbsp;SEU MOMENTO É AGORA&nbsp; — &nbsp;</span>
+        </div>
+        <div class="container final-cta__content reveal">
+          <p>O treino que você adia hoje<br />é a energia que vai faltar amanhã.</p>
+          <a class="btn btn--dark btn--large" href="#visita">Quero dar o primeiro passo <span class="btn__arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__top">
+        <a class="brand brand--footer" href="#topo" aria-label="Academia Ariônia - início">
+          <span class="brand__mark" aria-hidden="true">A</span>
+          <span class="brand__text">ARIÔNIA<small>ACADEMIA</small></span>
+        </a>
+        <p>Treino de verdade.<br />Acompanhamento de perto.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/academiaarionia/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a>
+          <a href="https://wa.me/5512988911301" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <span>© <span id="year"></span> Academia Ariônia</span>
+        <span>Rua Dr. Celestino, 520 — Cruzeiro/SP</span>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/5512988911301?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ari%C3%B4nia%20e%20quero%20saber%20mais."
+      target="_blank"
+      rel="noopener"
+      aria-label="Conversar com a Academia Ariônia pelo WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2.1 0-4.1-.6-5.8-1.7l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.7.1-1.8-.9-3-1.6-4.2-3.7-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.3 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.2.9 3.1 1 4.2.8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.2-.3-.5-.4-.8-.6Z" /></svg>
+      <span>Fale com a gente</span>
+    </a>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Abrindo o WhatsApp…</div>
+    <script src="script.js"></script>
+  </body>
+</html>
