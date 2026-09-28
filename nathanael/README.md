@@ -1,24 +1,26 @@
 # Nathanael Lisboa Advocacia
 
-Landing page profissional criada para a conta do Instagram `@nathanaellisboaadv`.
+Landing page institucional para Nathanael Lisboa Teodoro da Silva, OAB/RJ 160.042.
 
-## Como visualizar
+## Visualização local
 
-Abra o arquivo `index.html` no navegador ou execute:
+Na pasta do projeto, execute:
 
 ```bash
-cd /home/usuario/Documentos/clientes/nathanael
 python3 -m http.server 8000
 ```
 
-Depois acesse: `http://localhost:8000`
+Depois acesse `http://localhost:8000`.
 
 ## Estrutura
 
-- `index.html`: estrutura da landing page
-- `styles.css`: estilos e responsividade
-- `script.js`: menu mobile e FAQ
+- `index.html`: conteúdo, metadados e dados estruturados para busca
+- `styles.css`: identidade visual e responsividade
+- `script.js`: menu mobile, FAQ e integração do formulário com WhatsApp
+- `favicon.svg`: monograma NL usado como ícone do site
 
-## Personalização
+## Informações utilizadas
 
-A página foi criada com branding profissional em tons de azul e dourado para transmitir confiança, seriedade e proximidade.
+O conteúdo foi limitado a dados públicos verificáveis e às informações fornecidas pelo cliente: nome profissional, OAB/RJ 160.042, base em Barra Mansa/RJ, telefone, Instagram, sociedade individual de advocacia e publicação jurídica sobre Seguridade Social.
+
+O formulário não armazena dados: ele apenas prepara a mensagem e abre uma conversa no WhatsApp.
