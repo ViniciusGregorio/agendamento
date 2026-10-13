@@ -25,6 +25,57 @@
       }
     });
   });
+  const gallery = document.querySelector('#product-gallery');
+  const photoButtons = Array.from(document.querySelectorAll('.product-grid [data-photo-index]'));
+  const photos = photoButtons.map(button => {
+    const card = button.closest('.product-card');
+    const image = button.querySelector('img');
+    const quote = card.querySelector('[data-category]');
+    return { src: image.src, alt: image.alt, title: card.querySelector('h3').textContent, quote };
+  });
+  let photoIndex = 0;
+  function displayPhoto(index) {
+    photoIndex = (index + photos.length) % photos.length;
+    const photo = photos[photoIndex];
+    const image = document.querySelector('#gallery-image');
+    image.src = photo.src;
+    image.alt = photo.alt;
+    document.querySelector('#photo-title').textContent = photo.title;
+    document.querySelector('#photo-counter').textContent = `FOTO DA LOJA · ${String(photoIndex + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}`;
+  }
+  document.querySelectorAll('[data-photo-index]').forEach(button => {
+    button.addEventListener('click', () => {
+      displayPhoto(Number(button.dataset.photoIndex));
+      gallery.showModal();
+      document.documentElement.classList.add('gallery-open');
+    });
+  });
+  function closeGallery() {
+    gallery.close();
+    document.documentElement.classList.remove('gallery-open');
+  }
+  document.querySelector('.gallery-close').addEventListener('click', closeGallery);
+  document.querySelector('.gallery-prev').addEventListener('click', () => displayPhoto(photoIndex - 1));
+  document.querySelector('.gallery-next').addEventListener('click', () => displayPhoto(photoIndex + 1));
+  gallery.addEventListener('close', () => {
+    if (!gallery.open) document.documentElement.classList.remove('gallery-open');
+  });
+  gallery.addEventListener('click', event => {
+    if (event.target !== gallery) return;
+    const box = gallery.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) closeGallery();
+  });
+  gallery.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      displayPhoto(photoIndex + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+  document.querySelector('#gallery-quote').addEventListener('click', event => {
+    event.preventDefault();
+    closeGallery();
+    photos[photoIndex].quote.click();
+  });
   document.querySelector('#year').textContent = new Date().getFullYear();
   document.querySelector('#quote-form').addEventListener('submit', event => {
     event.preventDefault();
